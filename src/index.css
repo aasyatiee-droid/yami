@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-lavender: #DCCCF4;
+    --color-soft-pink: #F6D6E6;
+    --color-sky-blue: #CDE8F8;
+    --color-mint-green: #D5EBDD;
+    --color-cream: #FFF7E8;
+    --color-deep-purple: #685080;
+    --font-heading: 'Poppins', 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --font-arabic: 'Amiri', serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #FFF7E8;
+    color: #4A3B56;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Whimsical storybook styling */
+.storybook-card {
+  background: white;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(220, 204, 244, 0.6);
+  box-shadow: 0 10px 25px -5px rgba(104, 80, 128, 0.08), 0 8px 10px -6px rgba(104, 80, 128, 0.04);
+}
+
+.storybook-card-pink {
+  background: #FFF9FC;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(246, 214, 230, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(246, 214, 230, 0.3);
+}
+
+.storybook-card-lavender {
+  background: #FAF7FD;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(220, 204, 244, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(104, 80, 128, 0.12);
+}
+
+.storybook-card-blue {
+  background: #F5FAFE;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(205, 232, 248, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(205, 232, 248, 0.3);
+}
+
+.storybook-card-mint {
+  background: #F7FCF9;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(213, 235, 221, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(213, 235, 221, 0.3);
+}
+
+/* Gentle floating animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: gentle-float 4s ease-in-out 2s infinite;
+}
+
+/* Sparkle twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF7E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCCCF4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4ADE5;
+}
